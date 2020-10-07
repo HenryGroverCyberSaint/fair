@@ -20,7 +20,7 @@ class FairModelFactory(object):
         Random seed for number generation (default is 42)
 
     """
-    def __init__(self, static_arguments, n_simulations=10_000, random_seed=42):
+    def __init__(self, static_arguments, n_simulations=10000, random_seed=42):
         self._static_arguments = static_arguments
         self._n_simulations = n_simulations
         self._random_seed = random_seed
@@ -54,7 +54,7 @@ class FairModelFactory(object):
         Examples
         --------
         >>> fac = FairModelFactory({
-        ...    'Loss Magnitude': {'constant': 5_000_000}
+        ...    'Loss Magnitude': {'constant': 5000000}
         ... })
         >>> model1 =  fac.generate_from_partial(
         ...     'model1',

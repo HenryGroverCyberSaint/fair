@@ -59,7 +59,7 @@ class FairModel(object):
 
     def __init__(self, 
                  name, 
-                 n_simulations=10_000, 
+                 n_simulations=10000, 
                  random_seed=42, 
                  model_uuid=None, 
                  creation_date=None):
