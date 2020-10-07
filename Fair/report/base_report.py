@@ -133,6 +133,7 @@ class FairBaseReport(object):
             If the image parameter supplied is of an inappropriate type
         """
         # If path, open and read.
+        print(type(image)==str)
         if type(image) == str or isinstance(image, pathlib.Path):
             print(image)
             with open(image, 'rb') as f:
