@@ -27,7 +27,7 @@ class FairTreeGraph(object):
 
     """
     # Class attribute with magic numbers galore
-    _DIMENSIONS = pd.DataFrame.from_dict(
+    _DIMENSIONS = pd.DataFrame(list(
         {
             'Contact Frequency'             : ['C'   ,    0,    0,  600,  800],
             'Threat Event Frequency'        : ['TEF' ,  600,  800, 1800, 1600],
@@ -42,7 +42,7 @@ class FairTreeGraph(object):
             'Secondary Loss'                : ['SL'  , 7800,  800, 6600, 1600],
             'Secondary Loss Event Frequency': ['SLEF', 7200,    0, 7800,  800],
             'Secondary Loss Event Magnitude': ['SLEM', 8400,    0, 7800,  800],
-        }, 
+        }).iteritems(), 
         orient='index', 
         columns=['tag', 'self_x', 'self_y', 'parent_x', 'parent_y']
     )
