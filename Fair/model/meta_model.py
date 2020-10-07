@@ -56,7 +56,7 @@ class FairMetaModel(object):
             elif type(model) == type(self):
                 self._load_meta_model(model)
             else:
-                err = f'Input {model} is not a FairModel or FairMetaModel.'
+                err = 'Input {} is not a FairModel or FairMetaModel.'.format(model)
                 raise FairException(err)
         # Assign UUID
         if model_uuid and creation_date:

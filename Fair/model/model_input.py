@@ -301,7 +301,7 @@ class FairDataInput(object):
         # Ensure values are appropriate
         if target in self._le_1_targets:
             if s.max() > 1 or s.min() < 0:
-                raise FairException(f'{target} data greater or less than one')
+                raise FairException('{} data greater or less than one'.format(target))
         self._supplied_values[target] = {'raw': s.values.tolist()}
         return s.values
 

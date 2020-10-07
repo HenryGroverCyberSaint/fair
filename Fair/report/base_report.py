@@ -144,7 +144,7 @@ class FairBaseReport(object):
         # Get base64 string
         base64_string = base64.b64encode(binary_data).decode('utf8')
         # Create tag
-        tag = f'<img {options} src="data:image/png;base64, {base64_string}" alt="{alternative_text}"/>'
+        tag = '<img {} src="data:image/png;base64, {}" alt="{}"/>'.format(options,base64_string,alternative_text)
         return tag
 
     def _construct_output(self):
