@@ -134,6 +134,7 @@ class FairBaseReport(object):
         """
         # If path, open and read.
         if type(image) == str or isinstance(image, pathlib.Path):
+            print(image)
             with open(image, 'rb') as f:
                 binary_data = f.read()
         # If bytes, jsut write
