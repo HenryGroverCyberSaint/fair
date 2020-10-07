@@ -82,8 +82,8 @@ class FairTreeGraph(object):
         """Add title and run common changes"""
         # Set limits
         ax.set_title('Calculation Dependency Tree', fontsize=20)
-        ax.set_xlim(0, 9_400)
-        ax.set_ylim(0, 2_900)
+        ax.set_xlim(0, 9400)
+        ax.set_ylim(0, 2900)
         # Disappear axes and spines
         for axis in [ax.xaxis, ax.yaxis]:
             axis.set_visible(False)
