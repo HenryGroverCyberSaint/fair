@@ -70,7 +70,7 @@ class FairBaseReport(object):
             'mean',
             'stdev'
         ]
-        self.test_image(self._logo_location)
+        
 
     def _input_check(self, value):
         """Check input value for report is appropriate

@@ -27,6 +27,7 @@ class FairSimpleReport(FairBaseReport):
     """
     def __init__(self, model_or_models, currency_prefix='$', fair_location=None):
         super().__init__(currency_prefix=currency_prefix, fair_location=fair_location)
+        self.test_image(self._logo_location)
         self._currency_prefix = currency_prefix
         self._model_or_models = self._input_check(model_or_models)
         self._css = self._template_paths['css'].read_text()
