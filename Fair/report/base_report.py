@@ -52,8 +52,8 @@ class FairBaseReport(object):
         }
         # Add locations
         if(fair_location is None):
-            # self._fair_location = pathlib.Path(__file__).parent.parent
-            self._fair_location = '/databricks/driver/fair/Fair'
+            self._fair_location = pathlib.Path(__file__).parent.parent
+            # self._fair_location = '/databricks/driver/fair/Fair'
         else:
             self._fair_location = fair_location
         self._static_location = self._fair_location / 'static'
@@ -70,6 +70,7 @@ class FairBaseReport(object):
             'mean',
             'stdev'
         ]
+        self.test_image(self._logo_location)
 
     def _input_check(self, value):
         """Check input value for report is appropriate
@@ -110,6 +111,11 @@ class FairBaseReport(object):
             string appropriate for those nodes
         """
         return self._format_strings
+
+    def test_image(self,filename):
+        print(filename)
+        f = open(filename,'rb')
+        print(f[:5])
 
     def base64ify(self, image, alternative_text='', options=''):
         """Binary data into embeddable <img> tag with base64 data
