@@ -29,7 +29,7 @@ class FairBaseReport(object):
     instantiated on its own.
 
     """
-    def __init__(self, currency_prefix='$'):
+    def __init__(self, currency_prefix='$', fair_location=None):
         # Add formatting strings
         self._currency_prefix = currency_prefix
         self._model_or_models = None
@@ -51,7 +51,10 @@ class FairBaseReport(object):
             'Secondary Loss Event Magnitude' : self._currency_format_string,
         }
         # Add locations
-        self._fair_location = pathlib.Path(__file__).parent.parent
+        if(fair_location is None):
+            self._fair_location = pathlib.Path(__file__).parent.parent
+        else:
+            self._fair_location = fair_location
         self._static_location = self._fair_location / 'static'
         self._logo_location = self._static_location / 'cybersaint_logo.png'
         self._template_paths = {

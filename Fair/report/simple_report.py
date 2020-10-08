@@ -25,8 +25,8 @@ class FairSimpleReport(FairBaseReport):
     >>> fsr.generate_html('output.html')
 
     """
-    def __init__(self, model_or_models, currency_prefix='$'):
-        super().__init__(currency_prefix=currency_prefix)
+    def __init__(self, model_or_models, currency_prefix='$', fair_location=None):
+        super().__init__(currency_prefix=currency_prefix, fair_location=fair_location)
         self._currency_prefix = currency_prefix
         self._model_or_models = self._input_check(model_or_models)
         self._css = self._template_paths['css'].read_text()
