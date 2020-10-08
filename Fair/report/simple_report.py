@@ -46,6 +46,8 @@ class FairSimpleReport(FairBaseReport):
         # Add Metadata
         t = t.replace('{METADATA}', self._get_metadata_table())
         # Get logo tag
+        print(self._logo_location)
+        exit(1)
         b64 = self.base64ify(self._logo_location)
         t = t.replace('{PYTHON_LOGO}', b64)
 
