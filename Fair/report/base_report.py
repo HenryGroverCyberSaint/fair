@@ -52,7 +52,8 @@ class FairBaseReport(object):
         }
         # Add locations
         if(fair_location is None):
-            self._fair_location = pathlib.Path(__file__).parent.parent
+            # self._fair_location = pathlib.Path(__file__).parent.parent
+            self._fair_location = '/databricks/driver/fair/Fair'
         else:
             self._fair_location = fair_location
         self._static_location = self._fair_location / 'static'
